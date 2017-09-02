@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ChangeController">
+   <children>
+      <VBox prefHeight="768.0" prefWidth="1066.0">
+         <children>
+            <Label alignment="TOP_CENTER" text="Подсказка">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Чтобы сформировать ШР(добавить/удалить) нажмите правой кнопкой мыши." textFill="#00a10b">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="44.0" text="Штатное расписание (Текущее)">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane>
+               <children>
+                  <TreeView fx:id="treeSL" prefHeight="617.0" prefWidth="1066.0" />
+               </children>
+            </AnchorPane>
+            <HBox>
+               <children>
+                  <Button fx:id="btnAbout" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="141.0" text="Об организации">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="15.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <Label text="2-й клик(просмотр/редактирование) сотрудника" textFill="#00a10b">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="32.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Таблица сотрудников">
+               <VBox.margin>
+                  <Insets bottom="-2.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane prefWidth="300.0">
+               <children>
+                  <TableView fx:id="tableEmployees" layoutY="7.0" prefHeight="460.0" prefWidth="300.0">
+                    <columns>
+                      <TableColumn fx:id="columnSurname" prefWidth="300.0" text="Фамилия" />
+                        <TableColumn fx:id="columnName" prefWidth="300.0" text="Имя" />
+                        <TableColumn fx:id="columnPatronymic" prefWidth="300.0" text="Отчество" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets top="22.0" />
+                     </VBox.margin>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </AnchorPane>
+            <HBox prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="labelQuantity" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnCreateCondidate" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="140.0" text="Создать сотрудника">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnDeleteCondidate" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="140.0" text="Удалить">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="635.0" prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtSearch" prefWidth="220.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnSearch" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="60.0" text="Поиск">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Button fx:id="btnChange" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="300.0" text="Назад">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>

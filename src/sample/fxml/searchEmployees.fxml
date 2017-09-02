@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.SearchEmployeesControllers">
+   <children>
+      <VBox>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="350.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="400.0">
+                           <children>
+                              <Label text="Фамилия">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtSurname" prefWidth="160.0">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label prefWidth="55.0" text="Имя">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtName" prefWidth="160.0">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label prefWidth="55.0" text="Отчество">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtPatronymic" prefWidth="160.0">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="110.0" layoutY="10.0" prefHeight="108.0" prefWidth="280.0">
+                     <children>
+                        <RadioButton fx:id="rbAll" mnemonicParsing="false" text="Все">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="All" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbCandidate" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Кандидаты" toggleGroup="$All">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="rbEmployees" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="99.0" text="Сотрудники" toggleGroup="$All">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="rbDismissed" layoutX="10.0" layoutY="44.0" mnemonicParsing="false" text="Уволенные" toggleGroup="$All">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <TableView fx:id="tableSearch" prefHeight="220.0" prefWidth="630.0">
+              <columns>
+                <TableColumn fx:id="columnNumber" prefWidth="66.0" text="Таб. №" />
+                <TableColumn fx:id="columnSurname" prefWidth="90.0" text="Фамилия" />
+                  <TableColumn fx:id="columnName" prefWidth="69.0" text="Имя" />
+                  <TableColumn fx:id="columnPatronymic" prefWidth="96.0" text="Отчество" />
+                  <TableColumn fx:id="columnData" prefWidth="82.0" text="Дата рождения" />
+                  <TableColumn fx:id="columnAddress" prefWidth="88.0" text="Адрес проживаня" />
+                  <TableColumn fx:id="columnPhoneHome" prefWidth="61.0" text="Дом. тел." />
+                  <TableColumn fx:id="columnPhoneMob" prefWidth="77.0" text="Моб. тел." />
+              </columns>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#search" prefWidth="130.0" text="Искать">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnReset" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#reset" prefWidth="130.0" text="Сброс">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="110.0" right="110.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnExit" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#exit" prefWidth="130.0" text="Закрыть">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>

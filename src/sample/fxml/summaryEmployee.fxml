@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AddEmployeesController">
+   <children>
+      <VBox prefHeight="690.0" prefWidth="700.0">
+         <children>
+            <Label text="СВОДКА">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" opacity="0.5" text="Общие сведения">
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox layoutX="10.0" layoutY="81.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Фамилия">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtSurname" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Имя">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtName" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="81.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Отчество">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtPatronymic" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="144.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Пол">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="RMale" mnemonicParsing="false" text="Мужской">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ChangeSex" />
+                     </toggleGroup>
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="RFemale" layoutX="174.0" layoutY="10.0" mnemonicParsing="false" text="Женский" toggleGroup="$ChangeSex">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="244.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Возраст">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtAge" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label layoutX="10.0" layoutY="27.0" opacity="0.5" text="Сведения о дате и месте рождения">
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox layoutX="10.0" layoutY="344.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Дате рождения">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtData" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="461.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Место рождения">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPlace" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label layoutX="10.0" layoutY="444.0" opacity="0.5" text="Документ и прописка">
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox layoutX="10.0" layoutY="561.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Паспорт">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPassport" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="678.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Регистрация">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRegistration" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="778.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Дата регистрации">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDataRegistration" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label layoutX="10.0" layoutY="661.0" opacity="0.5" text="Адрес и контакты">
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox layoutX="10.0" layoutY="878.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Адрес">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtAddress" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="995.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Телефон дом.">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPhoneHome" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="1095.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Телефон моб.">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPhoneMob" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="1195.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="E-Mail">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmail" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label layoutX="10.0" layoutY="978.0" opacity="0.5" text="Образование и стаж">
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox layoutX="10.0" layoutY="1295.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Образование">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEducation" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="1412.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Общий стаж">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTotalExperience" prefWidth="526.0" promptText="лет месяцев дней">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="1512.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Стаж на предприятии">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtExperienceOrg" prefWidth="526.0" promptText="лет месяцев дней">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label layoutX="10.0" layoutY="1395.0" opacity="0.5" text="Сведения о работе">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox layoutX="10.0" layoutY="1612.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Подразделение">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSubdivision" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="1729.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Должность">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPosition" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="1829.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Табельный номер">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTabNumber" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="1929.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="154.0" text="Ставка">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRate" prefWidth="526.0">
+                     <HBox.margin>
+                        <Insets bottom="1.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="624.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnSave" defaultButton="true" mnemonicParsing="false" onAction="#Save" text="Сохранить (ENTER)">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="6.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnExit" cancelButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Exit" prefWidth="120.0" text="Выйти (ESC)">
+                     <HBox.margin>
+                        <Insets left="445.0" right="5.0" top="6.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>
